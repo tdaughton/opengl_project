@@ -3,6 +3,7 @@
 uniform mat4 ModelViewProjection; 
 
 attribute vec3 vertPosition;
+attribute vec3 vertNormal; 
 attribute vec3 vertColor;
 
 varying vec3 outColor;
