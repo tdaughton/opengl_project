@@ -1,0 +1,14 @@
+#version 120
+
+uniform mat4 ModelViewProjection; 
+uniform vec3 vertColor;
+
+attribute vec3 vertPos;
+
+varying vec3 outColor;
+
+void main() {
+    gl_Position = ModelViewProjection *vec4(vertPos, 1.0);
+    outColor=vertColor; 
+}
+

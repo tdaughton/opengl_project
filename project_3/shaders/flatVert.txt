@@ -1,0 +1,19 @@
+#version 120
+
+#extension GL_EXT_gpu_shader4 : require
+
+uniform mat4 ModelViewProjection; 
+
+attribute vec3 vertPos;
+attribute vec3 vertNorm;
+
+varying vec3 outPos;
+flat varying vec3 outNorm; 
+ 
+void main() {
+    outNorm = vertNorm; 
+    gl_Position = ModelViewProjection *vec4(vertPos, 1.0);
+    outPos = vec3(gl_Position);  
+
+}
+
